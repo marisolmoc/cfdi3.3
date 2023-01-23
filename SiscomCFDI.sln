@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiscomCFDI", "SiscomCFDI.csproj", "{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9E2C1732-0FEC-4057-9502-F451BC649A7A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SiscomCFDI33Setup", "..\SiscomCFDI33\SiscomCFDI33.vdproj", "{15E19BD2-1449-4FCB-BEAC-0372BB442121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		CD_ROM|x86 = CD_ROM|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		DVD-5|Any CPU = DVD-5|Any CPU
+		DVD-5|x86 = DVD-5|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		SingleImage|Any CPU = SingleImage|Any CPU
+		SingleImage|x86 = SingleImage|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.CD_ROM|x86.ActiveCfg = Release|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.CD_ROM|x86.Build.0 = Release|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Debug|x86.ActiveCfg = Debug|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Debug|x86.Build.0 = Debug|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.DVD-5|x86.ActiveCfg = Debug|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.DVD-5|x86.Build.0 = Debug|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Release|x86.ActiveCfg = Release|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.Release|x86.Build.0 = Release|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.SingleImage|x86.ActiveCfg = Release|x86
+		{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}.SingleImage|x86.Build.0 = Release|x86
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.CD_ROM|Any CPU.ActiveCfg = Release
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.CD_ROM|x86.ActiveCfg = Release
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.Debug|Any CPU.ActiveCfg = Debug
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.Debug|x86.ActiveCfg = Debug
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.DVD-5|Any CPU.ActiveCfg = Debug
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.DVD-5|x86.ActiveCfg = Debug
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.Release|Any CPU.ActiveCfg = Release
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.Release|x86.ActiveCfg = Release
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.SingleImage|Any CPU.ActiveCfg = Release
+		{15E19BD2-1449-4FCB-BEAC-0372BB442121}.SingleImage|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

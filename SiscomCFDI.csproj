@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D389C0D3-C8C5-4F08-90EA-1C4F4D885B97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SiscomCFDI</RootNamespace>
+    <AssemblyName>SiscomCFDI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>favicon32x32.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <PublishUrl>C:\Users\Usuario\Documents\10022019\SISCOMSOFT\CFDI3.3\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.4.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FFB32098B517161FA685FDBE177CB10AA38FAD00</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SiscomCFDI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChilkatDotNet2">
+      <HintPath>bin\Debug\ChilkatDotNet2.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CHILKATMAILLib2">
+      <HintPath>bin\Debug\Interop.CHILKATMAILLib2.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceso.Designer.cs">
+      <DependentUpon>Acceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddendaPepsico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddendaPepsico.Designer.cs">
+      <DependentUpon>AddendaPepsico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addendas.Designer.cs">
+      <DependentUpon>Addendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarFolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarFolio.Designer.cs">
+      <DependentUpon>AgregarFolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cancelaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cancelaciones.Designer.cs">
+      <DependentUpon>Cancelaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Certificados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Certificados.Designer.cs">
+      <DependentUpon>Certificados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cfdiDataSet.cs">
+      <DependentUpon>cfdiDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="cfdiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cfdiDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Clave_SAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clave_SAT.Designer.cs">
+      <DependentUpon>Clave_SAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComplementoINE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplementoINE.Designer.cs">
+      <DependentUpon>ComplementoINE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contraseña.Designer.cs">
+      <DependentUpon>Contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impuestos_SAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impuestos_SAT.Designer.cs">
+      <DependentUpon>Impuestos_SAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionesPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpcionesPagos.Designer.cs">
+      <DependentUpon>OpcionesPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelacionarCFDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelacionarCFDI.Designer.cs">
+      <DependentUpon>RelacionarCFDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCFRRepImpCFD-Pagos.cs">
+      <DependentUpon>SCFRRepImpCFD-Pagos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SCFRRepImpCFD_INE.cs">
+      <DependentUpon>SCFRRepImpCFD_INE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Correo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Correo.Designer.cs">
+      <DependentUpon>Correo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DtMensual.cs">
+      <DependentUpon>DtMensual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DtMensual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DtMensual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Folios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folios.Designer.cs">
+      <DependentUpon>Folios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Impresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Impresion.Designer.cs">
+      <DependentUpon>Impresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensualRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensualRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NotasCred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotasCred.Designer.cs">
+      <DependentUpon>NotasCred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="POSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Acceso.resx">
+      <DependentUpon>Acceso.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddendaPepsico.resx">
+      <DependentUpon>AddendaPepsico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addendas.resx">
+      <DependentUpon>Addendas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarFolio.resx">
+      <DependentUpon>AgregarFolio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cancelaciones.resx">
+      <DependentUpon>Cancelaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certificados.resx">
+      <DependentUpon>Certificados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clave_SAT.resx">
+      <DependentUpon>Clave_SAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplementoINE.resx">
+      <DependentUpon>ComplementoINE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contraseña.resx">
+      <DependentUpon>Contraseña.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impuestos_SAT.resx">
+      <DependentUpon>Impuestos_SAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpcionesPagos.resx">
+      <DependentUpon>OpcionesPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelacionarCFDI.resx">
+      <DependentUpon>RelacionarCFDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCFRRepImpCFD-Pagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SCFRRepImpCFD-Pagos.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCFRRepImpCFD_INE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SCFRRepImpCFD_INE.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Correo.resx">
+      <DependentUpon>Correo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Folios.resx">
+      <DependentUpon>Folios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Impresion.resx">
+      <DependentUpon>Impresion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensualRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MensualRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotasCred.resx">
+      <DependentUpon>NotasCred.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetencionesLocales.resx">
+      <DependentUpon>RetencionesLocales.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptMensual.resx">
+      <DependentUpon>RptMensual.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCFRRepImpCFD-RetLoc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SCFRRepImpCFD-RetLoc.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCFRRepImpCFD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SCFRRepImpCFD1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCFRRepImpCFD_Vendedor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SCFRRepImpCFD_Vendedor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectPais.resx">
+      <DependentUpon>SelectPais.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visor.resx">
+      <DependentUpon>visor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="cfdiDataSet.xsc">
+      <DependentUpon>cfdiDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="cfdiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cfdiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="cfdiDataSet.xss">
+      <DependentUpon>cfdiDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="POSDataSet.xsc">
+      <DependentUpon>POSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSDataSet.xss">
+      <DependentUpon>POSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="POSDataSet1.xsc">
+      <DependentUpon>POSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="POSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>POSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="POSDataSet1.xss">
+      <DependentUpon>POSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\cfdinova_produccion\TimbradorIntegradores.wsdl" />
+    <None Include="SiscomCFDI_TemporaryKey.pfx" />
+    <None Include="siscomsoftCFDIDataSet.xsc">
+      <DependentUpon>siscomsoftCFDIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="siscomsoftCFDIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>siscomsoftCFDIDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="siscomsoftCFDIDataSet.xss">
+      <DependentUpon>siscomsoftCFDIDataSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RepImpCFD.cs">
+      <DependentUpon>RepImpCFD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RepImpCFD.Designer.cs" />
+    <Compile Include="RepImpCFD1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepImpCFD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RetencionesLocales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetencionesLocales.Designer.cs">
+      <DependentUpon>RetencionesLocales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RptMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptMensual.Designer.cs">
+      <DependentUpon>RptMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCFRRepImpCFD-RetLoc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCFRRepImpCFD-RetLoc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SCFRRepImpCFD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SCFRRepImpCFD1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCFRRepImpCFD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="SCFRRepImpCFD_Vendedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SCFRRepImpCFD_Vendedor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SelectPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPais.Designer.cs">
+      <DependentUpon>SelectPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\cfdinova_produccion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="siscomsoftCFDIDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siscomsoftCFDIDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="visor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visor.Designer.cs">
+      <DependentUpon>visor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\mx.com.cfdinova.pruebas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\mx.com.cfdinova.test02\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\mx.com.cfdinova.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\mx.com.tusfacturas.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://pruebas.cfdinova.com.mx:59080/axis2/services/TimbradorIntegradores%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\mx.com.cfdinova.pruebas\</RelPath>
+      <UpdateFromURL>http://pruebas.cfdinova.com.mx:59080/axis2/services/TimbradorIntegradores%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SiscomCFDI_mx_com_cfdinova_pruebas_TimbradorIntegradores</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.cfdinova.com.mx:59080/axis2/services/TimbradorIntegradores%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\mx.com.cfdinova.www\</RelPath>
+      <UpdateFromURL>http://www.cfdinova.com.mx:59080/axis2/services/TimbradorIntegradores%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SiscomCFDI_mx_com_cfdinova_www_TimbradorIntegradores</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.tusfacturas.com.mx:59080/axis2/services/TimbradorIntegradores%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\mx.com.tusfacturas.www\</RelPath>
+      <UpdateFromURL>http://www.tusfacturas.com.mx:59080/axis2/services/TimbradorIntegradores%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SiscomCFDI_mx_com_tusfacturas_www_TimbradorIntegradores</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://test02.cfdinova.com.mx/axis2/services/TimbradorIntegradores%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\mx.com.cfdinova.test02\</RelPath>
+      <UpdateFromURL>https://test02.cfdinova.com.mx/axis2/services/TimbradorIntegradores%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SiscomCFDI_mx_com_cfdinova_test02_TimbradorIntegradores</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RepImpCFD.xsc">
+      <DependentUpon>RepImpCFD.xsd</DependentUpon>
+    </None>
+    <None Include="RepImpCFD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepImpCFD1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RepImpCFD.xss">
+      <DependentUpon>RepImpCFD.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54874.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon32x32.ico" />
+    <Content Include="Logo_siscomsoft.ico" />
+    <Content Include="Resources\cfdi2016_wallpaper.png" />
+    <None Include="Service References\cfdinova_produccion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\cfdinova_produccion\configuration.svcinfo" />
+    <None Include="Service References\cfdinova_produccion\configuration91.svcinfo" />
+    <None Include="Resources\if_money_406866.png" />
+    <None Include="Resources\cfdi33_wallpaper.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\1467370174_icon-68.png" />
+    <None Include="Resources\1467369922_delete_unapprove_discard_remove_x_red.png" />
+    <None Include="Resources\1467369409_document-dollar.png" />
+    <None Include="Resources\1467369502_Settings-5.png" />
+    <None Include="DtMensual.xsc">
+      <DependentUpon>DtMensual.xsd</DependentUpon>
+    </None>
+    <None Include="DtMensual.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DtMensual.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DtMensual.xss">
+      <DependentUpon>DtMensual.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\1339113744_order.png" />
+    <None Include="Resources\1339023241_credit.png" />
+    <None Include="Resources\1321060686_sign-out.png" />
+    <None Include="Resources\1321033007_cancel.png" />
+    <None Include="Resources\1321060716_print.png" />
+    <None Include="Resources\1321060690_invoice.png" />
+    <None Include="Resources\1321060470_hire-me.png" />
+    <None Include="Resources\siscomsoftCFDI.jpg" />
+    <None Include="Web References\mx.com.cfdinova.pruebas\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\mx.com.cfdinova.pruebas\TimbradorIntegradores.wsdl" />
+    <None Include="Web References\mx.com.cfdinova.test02\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\mx.com.cfdinova.test02\TimbradorIntegradores.wsdl" />
+    <None Include="Web References\mx.com.cfdinova.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\mx.com.cfdinova.www\TimbradorIntegradores.wsdl" />
+    <None Include="Web References\mx.com.tusfacturas.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\mx.com.tusfacturas.www\TimbradorIntegradores.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\cfdinova_produccion\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
