@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SiscomCFDI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="siscomsoftCFDIConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=WEBDEV-PC\SQLEXPRESS;Initial Catalog=siscomsoftCFDI;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=WEBDEV-PC\SQLEXPRESS;Initial Catalog=siscomsoftCFDI;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="POSConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source="C:\SisCom Pos\BD\POS.MDB"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source="C:\SisCom Pos\BD\POS.MDB"</Value>
+    </Setting>
+    <Setting Name="cfdiConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=localhost;User Id=root;password=123;Persist Security Info=True;database=cfdi&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=localhost;User Id=root;password=123;Persist Security Info=True;database=cfdi</Value>
+    </Setting>
+    <Setting Name="SiscomCFDI_mx_com_cfdinova_www_TimbradorIntegradores" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.cfdinova.com.mx:59080/axis2/services/TimbradorIntegradores.TimbradorIntegradoresHttpSoap11Endpoint/</Value>
+    </Setting>
+    <Setting Name="SiscomCFDI_mx_com_cfdinova_pruebas_TimbradorIntegradores" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pruebas.cfdinova.com.mx/axis2/services/TimbradorIntegradores.TimbradorIntegradoresHttpsSoap11Endpoint/</Value>
+    </Setting>
+    <Setting Name="SiscomCFDI_mx_com_tusfacturas_www_TimbradorIntegradores" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.tusfacturas.com.mx/axis2/services/TimbradorIntegradores.TimbradorIntegradoresHttpsSoap11Endpoint/</Value>
+    </Setting>
+    <Setting Name="SiscomCFDI_mx_com_cfdinova_test02_TimbradorIntegradores" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://test02.cfdinova.com.mx/axis2/services/TimbradorIntegradores.TimbradorIntegradoresHttpsSoap11Endpoint/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
